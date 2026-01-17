@@ -190,13 +190,26 @@
                     </tr>
                     <tr>
                         <td>사용 분석 데이터</td>
-                        <td>❌ 수집하지 않음</td>
+                        <td>⚠️ 익명화된 데이터만 수집 (아래 상세 설명)</td>
                     </tr>
                     <tr>
                         <td>광고 ID</td>
                         <td>❌ 수집하지 않음</td>
                     </tr>
                 </table>
+
+                <h3>익명화된 사용 분석</h3>
+                <p>앱 개선을 위해 Firebase Analytics를 사용하여 다음과 같은 <strong>익명화된 데이터</strong>를 수집합니다:</p>
+                <ul>
+                    <li>앱 실행/종료 이벤트</li>
+                    <li>화면 조회 (채팅, 설정 등)</li>
+                    <li>BLE 연결 상태 (연결 성공/실패 횟수)</li>
+                    <li>메시지 전송 횟수 (내용은 수집하지 않음)</li>
+                    <li>앱 버전 및 iOS 버전</li>
+                </ul>
+                <div class="highlight info">
+                    <strong>중요:</strong> 메시지 내용, 닉네임, 개인 식별 정보는 절대 수집하지 않습니다. 분석 데이터는 앱 개선 목적으로만 사용됩니다.
+                </div>
             </div>
 
             <div class="card">
@@ -252,11 +265,11 @@
 
             <div class="card">
                 <h2>7. 제3자 공유</h2>
-                <p>NearTalk은 <strong>어떠한 데이터도 제3자와 공유하지 않습니다.</strong></p>
+                <p>NearTalk은 <strong>개인 식별 가능한 데이터를 제3자와 공유하지 않습니다.</strong></p>
                 <ul>
                     <li>광고 네트워크 없음</li>
-                    <li>분석 서비스 없음</li>
-                    <li>외부 서버 연동 없음</li>
+                    <li>Firebase Analytics: 익명화된 사용 통계만 수집 (Google 개인정보처리방침 적용)</li>
+                    <li>메시지 내용은 외부로 전송되지 않음</li>
                 </ul>
             </div>
 
@@ -321,13 +334,26 @@
                     </tr>
                     <tr>
                         <td>Analytics Data</td>
-                        <td>❌ Not Collected</td>
+                        <td>⚠️ Only anonymized data (see details below)</td>
                     </tr>
                     <tr>
                         <td>Advertising ID</td>
                         <td>❌ Not Collected</td>
                     </tr>
                 </table>
+
+                <h3>Anonymized Usage Analytics</h3>
+                <p>To improve the app, we use Firebase Analytics to collect the following <strong>anonymized data</strong>:</p>
+                <ul>
+                    <li>App launch/close events</li>
+                    <li>Screen views (chat, settings, etc.)</li>
+                    <li>BLE connection status (success/failure counts)</li>
+                    <li>Message send counts (content is NOT collected)</li>
+                    <li>App version and iOS version</li>
+                </ul>
+                <div class="highlight info">
+                    <strong>Important:</strong> Message content, nicknames, and personally identifiable information are NEVER collected. Analytics data is used solely for app improvement.
+                </div>
             </div>
 
             <div class="card">
@@ -383,11 +409,11 @@
 
             <div class="card">
                 <h2>7. Third-Party Sharing</h2>
-                <p>NearTalk <strong>does not share any data with third parties.</strong></p>
+                <p>NearTalk <strong>does not share personally identifiable data with third parties.</strong></p>
                 <ul>
                     <li>No advertising networks</li>
-                    <li>No analytics services</li>
-                    <li>No external server connections</li>
+                    <li>Firebase Analytics: Only anonymized usage statistics (subject to Google's Privacy Policy)</li>
+                    <li>Message content is never transmitted externally</li>
                 </ul>
             </div>
 
