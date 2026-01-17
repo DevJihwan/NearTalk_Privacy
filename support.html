@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NearTalk - 고객 지원 | Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+            color: #1d1d1f;
+        }
+        p {
+            margin-bottom: 12px;
+            color: #424245;
+        }
+        ul {
+            margin: 12px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #424245;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e5e5;
+            padding: 16px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #1d1d1f;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+            color: #007aff;
+        }
+        .faq-answer {
+            margin-top: 12px;
+            color: #424245;
+            display: none;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+        .contact-box {
+            background: #e3f2fd;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-box a {
+            color: #007aff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .lang-switch a {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            color: #007aff;
+            border: 1px solid #007aff;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .lang-switch a:hover, .lang-switch a.active {
+            background: #007aff;
+            color: white;
+        }
+        .section-ko, .section-en {
+            display: none;
+        }
+        .section-ko.active, .section-en.active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #86868b;
+            font-size: 12px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+            background: #f5f5f7;
+            border-radius: 12px;
+        }
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .feature-desc {
+            font-size: 14px;
+            color: #666;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+            .card {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">💬</div>
+            <h1>NearTalk</h1>
+            <p class="subtitle">고객 지원 | Support</p>
+        </header>
+
+        <div class="lang-switch">
+            <a href="#" onclick="showLang('ko'); return false;" class="active" id="btn-ko">한국어</a>
+            <a href="#" onclick="showLang('en'); return false;" id="btn-en">English</a>
+        </div>
+
+        <!-- Korean Version -->
+        <div class="section-ko active">
+            <div class="card">
+                <h2>NearTalk 소개</h2>
+                <p>NearTalk은 인터넷 없이 Bluetooth만으로 주변 사람들과 대화할 수 있는 익명 채팅 앱입니다.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📡</div>
+                        <div class="feature-title">완전 오프라인</div>
+                        <div class="feature-desc">Wi-Fi/데이터 불필요</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎭</div>
+                        <div class="feature-title">완전 익명</div>
+                        <div class="feature-desc">계정 생성 불필요</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-title">종단간 암호화</div>
+                        <div class="feature-desc">E2EE로 보안 강화</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚇</div>
+                        <div class="feature-title">대중교통 최적화</div>
+                        <div class="feature-desc">지하철/버스에서 사용</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>자주 묻는 질문 (FAQ)</h2>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">블루투스 권한이 필요한 이유는?</div>
+                    <div class="faq-answer">
+                        NearTalk은 인터넷 대신 Bluetooth Low Energy(BLE)를 사용하여 주변 사용자와 통신합니다.
+                        블루투스 권한 없이는 다른 사용자를 찾거나 메시지를 주고받을 수 없습니다.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">통신 범위는 어느 정도인가요?</div>
+                    <div class="faq-answer">
+                        BLE 통신 범위는 환경에 따라 다르지만, 일반적으로 10-30미터 정도입니다.
+                        지하철이나 버스 같은 밀폐된 공간에서 가장 효과적으로 작동합니다.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">메시지는 얼마나 보관되나요?</div>
+                    <div class="faq-answer">
+                        기본적으로 메시지는 24시간 후 자동으로 삭제됩니다.
+                        설정에서 보관 기간을 1-30일 사이로 변경할 수 있습니다.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Panic Mode는 무엇인가요?</div>
+                    <div class="faq-answer">
+                        긴급 상황에서 모든 데이터를 즉시 삭제하는 기능입니다.
+                        앱 로고를 3회 빠르게 탭하면 실행되며, 모든 메시지, 암호화 키, 설정이 즉시 삭제됩니다.
+                        삭제된 데이터는 복구할 수 없습니다.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">배터리 소모가 많지 않나요?</div>
+                    <div class="faq-answer">
+                        NearTalk은 Bluetooth Low Energy(BLE)를 사용하므로 배터리 소모가 매우 적습니다.
+                        일반적인 사용 시 하루 배터리의 2-3% 정도만 소모됩니다.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">시뮬레이터에서 작동하지 않아요</div>
+                    <div class="faq-answer">
+                        iOS 시뮬레이터는 Bluetooth를 지원하지 않습니다.
+                        실제 iOS 기기 2대 이상에서 테스트해야 합니다.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>문의하기</h2>
+                <p>추가 질문이나 문제가 있으시면 언제든지 연락해 주세요.</p>
+                <div class="contact-box">
+                    <p><strong>이메일 문의</strong></p>
+                    <p><a href="mailto:support@neartalk.app">support@neartalk.app</a></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>시스템 요구사항</h2>
+                <ul>
+                    <li>iOS 16.0 이상</li>
+                    <li>Bluetooth Low Energy (BLE) 지원 기기</li>
+                    <li>iPhone 8 이상 권장</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- English Version -->
+        <div class="section-en">
+            <div class="card">
+                <h2>About NearTalk</h2>
+                <p>NearTalk is an anonymous chat app that lets you communicate with nearby people using only Bluetooth, without internet.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📡</div>
+                        <div class="feature-title">Fully Offline</div>
+                        <div class="feature-desc">No Wi-Fi/Data needed</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎭</div>
+                        <div class="feature-title">Anonymous</div>
+                        <div class="feature-desc">No account required</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-title">End-to-End Encrypted</div>
+                        <div class="feature-desc">E2EE protection</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚇</div>
+                        <div class="feature-title">Transit Optimized</div>
+                        <div class="feature-desc">For subway/bus use</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Frequently Asked Questions (FAQ)</h2>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Why does the app need Bluetooth permission?</div>
+                    <div class="faq-answer">
+                        NearTalk uses Bluetooth Low Energy (BLE) instead of the internet to communicate with nearby users.
+                        Without Bluetooth permission, the app cannot find other users or send/receive messages.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">What is the communication range?</div>
+                    <div class="faq-answer">
+                        BLE communication range varies by environment but is typically 10-30 meters.
+                        It works best in enclosed spaces like subways or buses.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">How long are messages stored?</div>
+                    <div class="faq-answer">
+                        By default, messages are automatically deleted after 24 hours.
+                        You can change the retention period from 1 to 30 days in settings.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">What is Panic Mode?</div>
+                    <div class="faq-answer">
+                        Panic Mode is an emergency feature that instantly deletes all data.
+                        Triple-tap the app logo to activate it. All messages, encryption keys, and settings are immediately deleted.
+                        Deleted data cannot be recovered.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Does it drain battery?</div>
+                    <div class="faq-answer">
+                        NearTalk uses Bluetooth Low Energy (BLE), which consumes very little battery.
+                        Typical usage only drains about 2-3% of battery per day.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Why doesn't it work on the simulator?</div>
+                    <div class="faq-answer">
+                        iOS Simulator does not support Bluetooth.
+                        You need at least two real iOS devices to test the app.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Contact Us</h2>
+                <p>If you have additional questions or issues, please don't hesitate to contact us.</p>
+                <div class="contact-box">
+                    <p><strong>Email Support</strong></p>
+                    <p><a href="mailto:support@neartalk.app">support@neartalk.app</a></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>System Requirements</h2>
+                <ul>
+                    <li>iOS 16.0 or later</li>
+                    <li>Bluetooth Low Energy (BLE) capable device</li>
+                    <li>iPhone 8 or later recommended</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 NearTalk. All rights reserved.</p>
+            <p><a href="privacy-policy.html" style="color: #86868b;">Privacy Policy</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.querySelectorAll('.section-ko, .section-en').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-switch a').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            document.querySelector('.section-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+
+        function toggleFaq(item) {
+            item.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
