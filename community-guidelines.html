@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OffTalk - Community Guidelines</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background-color: #f8f7ff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #8B5CF6, #00D4AA);
+            border-radius: 18px;
+            margin-bottom: 16px;
+        }
+        .logo svg {
+            width: 40px;
+            height: 40px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1a1a2e;
+        }
+        .subtitle {
+            color: #6b7280;
+            font-size: 14px;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .lang-switch a {
+            display: inline-block;
+            padding: 8px 24px;
+            margin: 0 4px;
+            text-decoration: none;
+            color: #8B5CF6;
+            border: 1.5px solid #8B5CF6;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .lang-switch a:hover {
+            background: rgba(139, 92, 246, 0.08);
+        }
+        .lang-switch a.active {
+            background: #8B5CF6;
+            color: #fff;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 8px rgba(139, 92, 246, 0.06);
+            border: 1px solid rgba(139, 92, 246, 0.06);
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 650;
+            margin-bottom: 14px;
+            color: #1a1a2e;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+            color: #1a1a2e;
+        }
+        p {
+            margin-bottom: 12px;
+            color: #374151;
+        }
+        ul, ol {
+            margin: 12px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #374151;
+        }
+        .callout {
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+        .callout strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        .callout.purple {
+            background: rgba(139, 92, 246, 0.08);
+            border-left: 4px solid #8B5CF6;
+        }
+        .callout.cyan {
+            background: rgba(0, 212, 170, 0.08);
+            border-left: 4px solid #00D4AA;
+        }
+        .callout.warning {
+            background: #FFF7ED;
+            border-left: 4px solid #F59E0B;
+        }
+        .callout.red {
+            background: #FEF2F2;
+            border-left: 4px solid #EF4444;
+        }
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+            counter-reset: step;
+        }
+        .step-list li {
+            position: relative;
+            padding-left: 48px;
+            margin-bottom: 16px;
+        }
+        .step-list li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 32px;
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+        .badge.warning-badge {
+            background: #FEF3C7;
+            color: #92400E;
+        }
+        .badge.temp-badge {
+            background: #FEE2E2;
+            color: #991B1B;
+        }
+        .badge.perm-badge {
+            background: #1a1a2e;
+            color: #fff;
+        }
+        .enforcement-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #E5E7EB;
+        }
+        .enforcement-table th {
+            background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .enforcement-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #F3F4F6;
+            font-size: 14px;
+            color: #374151;
+        }
+        .enforcement-table tr:last-child td {
+            border-bottom: none;
+        }
+        .enforcement-table tr:hover td {
+            background: rgba(139, 92, 246, 0.03);
+        }
+        .section-en, .section-ko {
+            display: none;
+        }
+        .section-en.active, .section-ko.active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px 20px;
+            color: #9CA3AF;
+            font-size: 12px;
+        }
+        footer a {
+            color: #8B5CF6;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+            .card {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .enforcement-table {
+                font-size: 13px;
+            }
+            .enforcement-table th,
+            .enforcement-table td {
+                padding: 10px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6C12.268 6 6 11.373 6 18c0 3.442 1.776 6.558 4.6 8.8L9 32l5.6-2.8C16.04 29.72 17.98 30 20 30c7.732 0 14-5.373 14-12S27.732 6 20 6z" fill="white" fill-opacity="0.9"/>
+                    <circle cx="14" cy="18" r="2" fill="#8B5CF6"/>
+                    <circle cx="20" cy="18" r="2" fill="#00D4AA"/>
+                    <circle cx="26" cy="18" r="2" fill="#8B5CF6"/>
+                </svg>
+            </div>
+            <h1>OffTalk</h1>
+            <p class="subtitle">Community Guidelines</p>
+        </header>
+
+        <div class="lang-switch">
+            <a onclick="showLang('en'); return false;" class="active" id="btn-en">English</a>
+            <a onclick="showLang('ko'); return false;" id="btn-ko">한국어</a>
+        </div>
+
+        <!-- ==================== ENGLISH VERSION ==================== -->
+        <div class="section-en active">
+
+            <div class="card">
+                <h2>Welcome to OffTalk</h2>
+                <p><strong>Effective Date: March 2026</strong></p>
+                <p>OffTalk connects people nearby through Bluetooth &mdash; no accounts, no servers, no internet required. Whether you're on a subway, at a concert, or on a flight, OffTalk lets you chat with the people around you.</p>
+                <p>To keep this experience enjoyable and safe for everyone, we ask all users to follow these Community Guidelines. By using OffTalk, you agree to abide by them.</p>
+                <div class="callout purple">
+                    <strong>Our Philosophy</strong>
+                    OffTalk is built on the belief that real-world proximity creates meaningful connections. These guidelines exist to protect that experience &mdash; not to limit it.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>1. Respect &amp; Courtesy</h2>
+                <p>OffTalk brings together real people in real spaces. Treat every conversation the way you'd want to be treated.</p>
+                <ul>
+                    <li><strong>Be respectful.</strong> Everyone deserves to feel welcome, regardless of their background, identity, or beliefs.</li>
+                    <li><strong>Be considerate.</strong> Remember that the person you're chatting with may be standing right next to you.</li>
+                    <li><strong>Be constructive.</strong> Disagreements are fine &mdash; personal attacks are not.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>2. Prohibited Content &amp; Behavior</h2>
+                <p>The following are strictly prohibited on OffTalk. Violations may result in immediate action.</p>
+
+                <h3>Hate &amp; Discrimination</h3>
+                <ul>
+                    <li>Hate speech, slurs, or discriminatory language targeting race, ethnicity, nationality, religion, gender, sexual orientation, disability, or any other protected characteristic</li>
+                    <li>Content that promotes or glorifies hate groups or ideologies</li>
+                </ul>
+
+                <h3>Harassment &amp; Threats</h3>
+                <ul>
+                    <li>Bullying, intimidation, or targeted harassment of other users</li>
+                    <li>Threats of violence or harm (whether direct or implied)</li>
+                    <li>Stalking or repeatedly contacting someone who has blocked you</li>
+                    <li>Doxxing or sharing someone's personal information without consent</li>
+                </ul>
+
+                <h3>Inappropriate &amp; Harmful Content</h3>
+                <ul>
+                    <li>Sexually explicit or pornographic content</li>
+                    <li>Content depicting graphic violence or gore</li>
+                    <li>Content that is inappropriate for minors</li>
+                </ul>
+
+                <h3>Spam &amp; Misuse</h3>
+                <ul>
+                    <li>Unsolicited advertising, promotions, or commercial messages</li>
+                    <li>Repetitive or disruptive messages (flooding)</li>
+                    <li>Attempting to exploit or manipulate app features</li>
+                </ul>
+
+                <h3>Illegal Activities</h3>
+                <ul>
+                    <li>Promoting, facilitating, or engaging in illegal activities</li>
+                    <li>Selling or distributing controlled substances</li>
+                    <li>Soliciting or sharing illegal content of any kind</li>
+                </ul>
+
+                <h3>Privacy Violations</h3>
+                <ul>
+                    <li>Pressuring other users to share personal information (real name, phone number, address, etc.)</li>
+                    <li>Sharing screenshots or content from private conversations without consent</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>3. Safety Features</h2>
+                <p>OffTalk provides built-in tools to help you stay safe.</p>
+
+                <h3>Content Filter</h3>
+                <p>OffTalk includes an on-device content filter that automatically detects and blocks inappropriate language, slurs, and harmful expressions. This filter works entirely offline &mdash; your messages are never sent to any server for analysis.</p>
+
+                <h3>Block</h3>
+                <p>If someone is making you uncomfortable, you can block them instantly. Blocked users will no longer be able to send you messages. Blocking is based on unique Peer IDs, so it cannot be bypassed by changing a display name.</p>
+
+                <h3>Report</h3>
+                <p>You can report any message or user that violates these guidelines. Reports are stored locally on your device and automatically submitted to our moderation team when your device connects to the internet. You can report a user by long-pressing on a message and selecting "Report."</p>
+
+                <div class="callout cyan">
+                    <strong>Your Safety Matters</strong>
+                    If you ever feel unsafe, use the Block and Report features immediately. You don't need to engage with anyone who makes you uncomfortable.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>4. Report Review Process</h2>
+                <p>We take every report seriously. Here's how the process works:</p>
+
+                <ol class="step-list">
+                    <li><strong>Report Received</strong><br>When your device connects to the internet, your report is securely submitted to our moderation system.</li>
+                    <li><strong>Review (within 24 hours)</strong><br>Our team reviews the report and assesses the severity of the violation. We aim to complete all reviews within 24 hours of receipt.</li>
+                    <li><strong>Action Taken</strong><br>Based on the review, appropriate action is taken &mdash; ranging from a warning to a permanent ban.</li>
+                    <li><strong>Notification</strong><br>The reporting user may be notified of the outcome when possible.</li>
+                </ol>
+
+                <div class="callout warning">
+                    <strong>Automatic Enforcement</strong>
+                    If a user receives multiple reports from different users within a short time period, our system may automatically apply a temporary restriction while the reports are being reviewed.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>5. Enforcement Actions</h2>
+                <p>Violations of these guidelines are handled through a progressive enforcement system.</p>
+
+                <table class="enforcement-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Action</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge warning-badge">Level 1</span></td>
+                            <td><strong>Warning</strong></td>
+                            <td>A notification informing the user of the violation. The user is expected to correct their behavior immediately.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge temp-badge">Level 2</span></td>
+                            <td><strong>Temporary Restriction</strong></td>
+                            <td>The user's messaging ability is suspended for 24 hours. Repeated or serious violations trigger this action.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge perm-badge">Level 3</span></td>
+                            <td><strong>Permanent Ban</strong></td>
+                            <td>The user's Peer ID is permanently blocked. This is reserved for severe violations such as threats of violence, distribution of illegal content, or repeated offenses.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout red">
+                    <strong>Severe Violations</strong>
+                    Certain serious violations &mdash; including threats of violence, sexual exploitation of minors, and distribution of illegal content &mdash; may result in an immediate permanent ban without prior warnings.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>6. Appeals</h2>
+                <p>If you believe an enforcement action was taken in error, you have the right to appeal.</p>
+                <ul>
+                    <li>Send an email to <strong><a href="mailto:support@offtalk.app" style="color: #8B5CF6;">support@offtalk.app</a></strong> with the subject line "Appeal Request."</li>
+                    <li>Include a description of the situation and any relevant context.</li>
+                    <li>Appeals are reviewed within 48 hours, and you will receive a response via email.</li>
+                </ul>
+                <p>We are committed to fair and transparent enforcement. Every appeal is reviewed carefully.</p>
+            </div>
+
+            <div class="card">
+                <h2>7. Updates to These Guidelines</h2>
+                <p>We may update these Community Guidelines from time to time to reflect changes in our app, legal requirements, or community needs. When we make significant changes, we will notify users through an in-app notice.</p>
+                <p>We encourage you to review these guidelines periodically.</p>
+            </div>
+
+            <div class="card">
+                <h2>8. Contact Us</h2>
+                <p>If you have questions, concerns, or feedback about these Community Guidelines, we'd love to hear from you.</p>
+                <p><strong>Email:</strong> <a href="mailto:support@offtalk.app" style="color: #8B5CF6;">support@offtalk.app</a></p>
+                <p>Thank you for being part of the OffTalk community. Together, we can keep this a welcoming space for everyone.</p>
+            </div>
+
+        </div>
+
+        <!-- ==================== KOREAN VERSION ==================== -->
+        <div class="section-ko">
+
+            <div class="card">
+                <h2>OffTalk에 오신 것을 환영합니다</h2>
+                <p><strong>시행일: 2026년 3월</strong></p>
+                <p>OffTalk은 블루투스를 통해 주변 사람들과 연결해주는 앱입니다. 계정도, 서버도, 인터넷도 필요 없습니다. 지하철, 콘서트, 비행기 안 등 어디서든 주변 사람들과 자유롭게 대화할 수 있습니다.</p>
+                <p>모두에게 즐겁고 안전한 경험을 제공하기 위해, 모든 사용자에게 아래 커뮤니티 가이드라인을 준수해 주시길 부탁드립니다. OffTalk을 사용하시면 본 가이드라인에 동의하신 것으로 간주됩니다.</p>
+                <div class="callout purple">
+                    <strong>우리의 철학</strong>
+                    OffTalk은 물리적 근접성이 의미 있는 연결을 만든다는 믿음 위에 만들어졌습니다. 이 가이드라인은 그 경험을 보호하기 위해 존재합니다.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>1. 존중과 배려</h2>
+                <p>OffTalk은 실제 공간에 있는 실제 사람들을 연결합니다. 대화할 때 상대방을 존중해 주세요.</p>
+                <ul>
+                    <li><strong>존중하세요.</strong> 배경, 정체성, 신념에 관계없이 모든 사람은 환영받을 자격이 있습니다.</li>
+                    <li><strong>배려하세요.</strong> 대화 상대가 바로 옆에 서 있을 수 있다는 것을 기억해 주세요.</li>
+                    <li><strong>건설적으로 대화하세요.</strong> 의견 차이는 괜찮지만, 인신공격은 허용되지 않습니다.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>2. 금지 콘텐츠 및 행위</h2>
+                <p>아래 행위는 OffTalk에서 엄격히 금지됩니다. 위반 시 즉각적인 조치가 취해질 수 있습니다.</p>
+
+                <h3>혐오 및 차별</h3>
+                <ul>
+                    <li>인종, 민족, 국적, 종교, 성별, 성적 지향, 장애 등을 대상으로 한 혐오 발언, 비하 표현, 차별적 언어</li>
+                    <li>혐오 단체나 이념을 홍보하거나 미화하는 콘텐츠</li>
+                </ul>
+
+                <h3>괴롭힘 및 위협</h3>
+                <ul>
+                    <li>다른 사용자에 대한 괴롭힘, 협박, 표적 공격</li>
+                    <li>직접적이든 암시적이든 폭력이나 위해를 가하겠다는 위협</li>
+                    <li>스토킹 또는 차단한 사람에게 반복적으로 연락하는 행위</li>
+                    <li>동의 없이 타인의 개인정보를 공개하는 행위(신상 털기)</li>
+                </ul>
+
+                <h3>부적절하고 유해한 콘텐츠</h3>
+                <ul>
+                    <li>성적으로 노골적이거나 음란한 콘텐츠</li>
+                    <li>심각한 폭력이나 잔인한 장면을 묘사하는 콘텐츠</li>
+                    <li>미성년자에게 부적절한 콘텐츠</li>
+                </ul>
+
+                <h3>스팸 및 악용</h3>
+                <ul>
+                    <li>원치 않는 광고, 홍보, 상업적 메시지</li>
+                    <li>반복적이거나 방해가 되는 메시지(도배)</li>
+                    <li>앱 기능을 악용하거나 조작하려는 시도</li>
+                </ul>
+
+                <h3>불법 활동</h3>
+                <ul>
+                    <li>불법 활동을 조장, 촉진, 참여하는 행위</li>
+                    <li>규제 약물의 판매 또는 유통</li>
+                    <li>모든 종류의 불법 콘텐츠 요청 또는 공유</li>
+                </ul>
+
+                <h3>개인정보 침해</h3>
+                <ul>
+                    <li>다른 사용자에게 개인정보(실명, 전화번호, 주소 등) 공유를 강요하거나 압박하는 행위</li>
+                    <li>동의 없이 비공개 대화의 스크린샷이나 내용을 공유하는 행위</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>3. 안전 기능</h2>
+                <p>OffTalk은 사용자의 안전을 위한 기능을 내장하고 있습니다.</p>
+
+                <h3>콘텐츠 필터</h3>
+                <p>OffTalk은 부적절한 언어, 비하 표현, 유해한 표현을 자동으로 감지하고 차단하는 온디바이스 콘텐츠 필터를 포함하고 있습니다. 이 필터는 완전히 오프라인으로 작동하므로 메시지가 분석을 위해 서버로 전송되지 않습니다.</p>
+
+                <h3>차단</h3>
+                <p>불편한 사용자가 있다면 즉시 차단할 수 있습니다. 차단된 사용자는 더 이상 메시지를 보낼 수 없습니다. 차단은 고유한 Peer ID를 기반으로 하므로, 표시 이름을 변경해도 우회할 수 없습니다.</p>
+
+                <h3>신고</h3>
+                <p>가이드라인을 위반하는 메시지나 사용자를 신고할 수 있습니다. 신고는 기기에 로컬로 저장되었다가, 인터넷에 연결될 때 자동으로 운영팀에 제출됩니다. 메시지를 길게 눌러 "신고"를 선택하면 신고할 수 있습니다.</p>
+
+                <div class="callout cyan">
+                    <strong>당신의 안전이 최우선입니다</strong>
+                    불안함을 느끼시면 즉시 차단 및 신고 기능을 사용해 주세요. 불편한 상대와 대화를 계속할 필요가 없습니다.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>4. 신고 처리 절차</h2>
+                <p>모든 신고는 신중하게 처리됩니다. 처리 과정은 다음과 같습니다.</p>
+
+                <ol class="step-list">
+                    <li><strong>신고 접수</strong><br>기기가 인터넷에 연결되면 신고가 안전하게 운영 시스템에 제출됩니다.</li>
+                    <li><strong>검토 (24시간 이내)</strong><br>운영팀이 신고를 검토하고 위반의 심각도를 평가합니다. 접수 후 24시간 이내에 모든 검토를 완료하는 것을 목표로 합니다.</li>
+                    <li><strong>조치</strong><br>검토 결과에 따라 경고부터 영구 차단까지 적절한 조치가 취해집니다.</li>
+                    <li><strong>알림</strong><br>가능한 경우 신고한 사용자에게 결과를 알려드립니다.</li>
+                </ol>
+
+                <div class="callout warning">
+                    <strong>자동 제재</strong>
+                    한 사용자가 짧은 시간 내에 여러 다른 사용자로부터 다수의 신고를 받을 경우, 검토가 진행되는 동안 시스템이 자동으로 임시 제재를 적용할 수 있습니다.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>5. 제재 단계</h2>
+                <p>가이드라인 위반은 단계적 제재 시스템을 통해 처리됩니다.</p>
+
+                <table class="enforcement-table">
+                    <thead>
+                        <tr>
+                            <th>단계</th>
+                            <th>조치</th>
+                            <th>상세 내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge warning-badge">1단계</span></td>
+                            <td><strong>경고</strong></td>
+                            <td>위반 사실을 알리는 안내가 전달됩니다. 즉시 행동을 교정해 주셔야 합니다.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge temp-badge">2단계</span></td>
+                            <td><strong>임시 제재</strong></td>
+                            <td>24시간 동안 메시지 전송이 제한됩니다. 반복적이거나 심각한 위반 시 적용됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge perm-badge">3단계</span></td>
+                            <td><strong>영구 차단</strong></td>
+                            <td>해당 사용자의 Peer ID가 영구적으로 차단됩니다. 폭력 위협, 불법 콘텐츠 유포, 반복 위반 등 심각한 경우에 적용됩니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout red">
+                    <strong>심각한 위반</strong>
+                    폭력 위협, 미성년자 성적 착취, 불법 콘텐츠 유포 등 특정 심각한 위반은 사전 경고 없이 즉시 영구 차단될 수 있습니다.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>6. 이의 제기</h2>
+                <p>제재 조치가 잘못 적용되었다고 판단되시면 이의를 제기하실 수 있습니다.</p>
+                <ul>
+                    <li><strong><a href="mailto:support@offtalk.app" style="color: #8B5CF6;">support@offtalk.app</a></strong>으로 제목에 "이의 제기 요청"이라고 적어 이메일을 보내주세요.</li>
+                    <li>상황에 대한 설명과 관련 맥락을 포함해 주세요.</li>
+                    <li>이의 제기는 48시간 이내에 검토되며, 이메일로 결과를 알려드립니다.</li>
+                </ul>
+                <p>공정하고 투명한 운영을 위해 최선을 다하겠습니다. 모든 이의 제기는 신중하게 검토됩니다.</p>
+            </div>
+
+            <div class="card">
+                <h2>7. 가이드라인 변경</h2>
+                <p>앱의 변화, 법적 요구사항, 커뮤니티의 필요에 따라 본 커뮤니티 가이드라인을 수시로 업데이트할 수 있습니다. 중요한 변경 사항이 있을 경우 앱 내 공지를 통해 알려드립니다.</p>
+                <p>정기적으로 가이드라인을 확인해 주시길 권장합니다.</p>
+            </div>
+
+            <div class="card">
+                <h2>8. 문의</h2>
+                <p>커뮤니티 가이드라인에 대한 질문, 우려 사항, 피드백이 있으시면 언제든 연락해 주세요.</p>
+                <p><strong>이메일:</strong> <a href="mailto:support@offtalk.app" style="color: #8B5CF6;">support@offtalk.app</a></p>
+                <p>OffTalk 커뮤니티의 일원이 되어 주셔서 감사합니다. 함께 모두에게 편안한 공간을 만들어 나가겠습니다.</p>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 OffTalk. All rights reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="https://devjihwan.github.io/NearTalk_Privacy/privacy-policy.html">Privacy Policy</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.querySelectorAll('.section-ko, .section-en').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-switch a').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelector('.section-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
