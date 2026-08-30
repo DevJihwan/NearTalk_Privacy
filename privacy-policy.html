@@ -151,8 +151,9 @@ footer{border-top:1px solid var(--line);padding:26px 0 56px;color:var(--muted);f
   <h2>7. 캡처 감지</h2>
   <p>대화 중 화면 녹화나 캡처가 감지되면 같은 방의 참여자 모두에게 알립니다.
   이때 전송되는 것은 <strong>"캡처가 있었다"는 사실뿐</strong>이며, 누가 했는지는 표시하지 않습니다.</p>
-  <div class="note warn"><i></i><p>캡처 감지는 <strong>억제 수단이지 차단 수단이 아닙니다.</strong>
-    iOS는 스크린샷을 막을 수 없고, 다른 기기로 화면을 촬영하는 것은 어떤 앱도 막을 수 없습니다.</p></div>
+  <div class="note warn"><i></i><p><strong>완전히 막을 수는 없습니다.</strong>
+    녹화 중에는 대화를 가리고, 스크린샷은 비어 나오게 시도합니다. 다만 이 방식은 iOS 내부 동작에
+    의존해 보장되지 않으며, <strong>다른 기기로 화면을 촬영하는 것은 어떤 앱도 막을 수 없습니다.</strong></p></div>
 
   <h2>8. 익명성의 한계</h2>
   <p>익명은 <strong>사람 수에 달려 있습니다.</strong> 방에 둘뿐이라면 상대가 쓴 것이 아닌 모든 말은
@@ -255,9 +256,10 @@ footer{border-top:1px solid var(--line);padding:26px 0 56px;color:var(--muted);f
   <h2>7. Capture detection</h2>
   <p>If screen recording or a screenshot is detected during a conversation, everyone in the room is
   notified. Only the <strong>fact that a capture occurred</strong> is shared; who did it is not shown.</p>
-  <div class="note warn"><i></i><p>Capture detection is a <strong>deterrent, not a block.</strong>
-    iOS cannot prevent screenshots, and no app can prevent someone photographing the screen with
-    another device.</p></div>
+  <div class="note warn"><i></i><p><strong>We cannot fully block captures.</strong>
+    While screen recording is active the conversation is hidden, and we attempt to make screenshots
+    come out blank. That attempt depends on iOS internals and is not guaranteed, and
+    <strong>no app can prevent someone photographing the screen with another device.</strong></p></div>
 
   <h2>8. The limits of anonymity</h2>
   <p>Anonymity depends on <strong>how many people are present.</strong> If only two of you are in a room,

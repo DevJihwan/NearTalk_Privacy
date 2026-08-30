@@ -137,9 +137,10 @@ footer{border-top:1px solid var(--line);padding:26px 0 56px;color:var(--muted);f
 
   <details>
     <summary>상대가 화면을 캡처하면요?</summary>
-    <p>화면 녹화나 캡처가 감지되면 <strong>방 전체에 알립니다.</strong>
-    다만 <strong>캡처 자체를 막지는 못합니다.</strong> iOS가 스크린샷을 차단할 수 없고,
-    다른 폰으로 화면을 찍는 것은 어떤 앱도 막을 수 없습니다. 그 전제로 사용해 주세요.</p>
+    <p><strong>완전히 막을 수는 없습니다.</strong> 녹화 중에는 대화를 가리고, 스크린샷은
+    비어 나오게 시도하며, 캡처가 감지되면 <strong>방 전체에 알립니다.</strong>
+    다만 비우기는 iOS 내부 동작에 의존해 보장되지 않고,
+    <strong>다른 폰으로 화면을 찍는 것은 어떤 앱도 막을 수 없습니다.</strong> 그 전제로 사용해 주세요.</p>
   </details>
 
   <details>
@@ -235,9 +236,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 56px;color:var(--muted);f
 
   <details>
     <summary>What if someone screenshots the conversation?</summary>
-    <p>Screen recording and screenshots are detected and <strong>everyone in the room is notified.</strong>
-    But we <strong>cannot block the capture itself.</strong> iOS cannot prevent screenshots, and no app
-    can prevent someone photographing the screen with another phone. Please use it on that basis.</p>
+    <p><strong>We cannot fully block captures.</strong> While recording is active the conversation
+    is hidden, screenshots are attempted to come out blank, and when a capture is detected
+    <strong>everyone in the room is notified.</strong> The blanking depends on iOS internals and is
+    not guaranteed, and <strong>no app can prevent someone photographing the screen with another
+    phone.</strong> Please use it on that basis.</p>
   </details>
 
   <details>
