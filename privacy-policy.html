@@ -1,466 +1,324 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NearTalk - 개인정보처리방침 | Privacy Policy</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f7;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .logo {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            color: #666;
-            font-size: 14px;
-        }
-        .card {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        h2 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #1d1d1f;
-        }
-        h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin: 20px 0 10px 0;
-            color: #1d1d1f;
-        }
-        p {
-            margin-bottom: 12px;
-            color: #424245;
-        }
-        ul {
-            margin: 12px 0;
-            padding-left: 24px;
-        }
-        li {
-            margin-bottom: 8px;
-            color: #424245;
-        }
-        .highlight {
-            background: #e8f5e9;
-            border-left: 4px solid #4caf50;
-            padding: 16px;
-            margin: 16px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .highlight.warning {
-            background: #fff3e0;
-            border-left-color: #ff9800;
-        }
-        .highlight.info {
-            background: #e3f2fd;
-            border-left-color: #2196f3;
-        }
-        .lang-switch {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .lang-switch a {
-            display: inline-block;
-            padding: 8px 20px;
-            margin: 0 5px;
-            text-decoration: none;
-            color: #007aff;
-            border: 1px solid #007aff;
-            border-radius: 20px;
-            font-size: 14px;
-            transition: all 0.2s;
-        }
-        .lang-switch a:hover, .lang-switch a.active {
-            background: #007aff;
-            color: white;
-        }
-        .section-ko, .section-en {
-            display: none;
-        }
-        .section-ko.active, .section-en.active {
-            display: block;
-        }
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #86868b;
-            font-size: 12px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #e5e5e5;
-        }
-        th {
-            background: #f5f5f7;
-            font-weight: 600;
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px 16px;
-            }
-            .card {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>탕비실 — 개인정보처리방침 | Privacy Policy</title>
+<meta name="description" content="탕비실 개인정보처리방침. 서버 없는 근거리 익명 대화 앱이 무엇을 저장하고, 무엇을 저장하지 않는지.">
+<meta name="theme-color" content="#08090A">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root{--bg:#08090A;--surface:#0E1011;--ink:#F7F8F8;--ink2:#8A8F98;--muted:#4A4F57;
+  --line:rgba(255,255,255,.09);--signal:#5EEAD4;--signalInk:#04201C;--alert:#FF5F56}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);word-break:keep-all;line-height:1.65;
+  font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Apple SD Gothic Neo',sans-serif;
+  font-weight:400;letter-spacing:-.022em}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+a{color:var(--signal);text-decoration:none}
+a:hover{color:#8FF3E3}
+a:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+header{padding:34px 0 20px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{display:block;border-radius:13px}
+.brand b{font-weight:550;font-size:17px}
+h1{font-size:28px;font-weight:550;line-height:1.3;margin:26px 0 6px}
+.updated{color:var(--muted);font-size:13px;margin:0}
+.tabs{display:flex;gap:8px;margin:22px 0 0}
+.tabs button{font:inherit;font-size:14px;font-weight:500;color:var(--ink2);cursor:pointer;
+  background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 16px}
+.tabs button.on{color:var(--signalInk);background:var(--signal);border-color:var(--signal);font-weight:550}
+main{padding:8px 0 64px}
+h2{font-size:19px;font-weight:550;margin:40px 0 10px;line-height:1.35}
+p{margin:10px 0;color:var(--ink2);font-size:15px}
+ul{margin:10px 0;padding-left:18px;color:var(--ink2);font-size:15px}
+li{margin:6px 0}
+strong{color:var(--ink);font-weight:550}
+.lead{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:22px 0}
+.lead p{margin:0;color:var(--ink)}
+.note{display:grid;grid-template-columns:3px 1fr;gap:14px;background:var(--surface);
+  border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.note i{display:block;border-radius:2px;background:var(--signal)}
+.note.warn i{background:var(--alert)}
+.note p{margin:0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--ink);font-weight:550;font-size:13px}
+td{color:var(--ink2)}
+td.no{color:var(--ink2)}
+td.yes{color:var(--signal)}
+footer{border-top:1px solid var(--line);padding:26px 0 56px;color:var(--muted);font-size:14px}
+.flinks{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:12px}
+.flinks a{color:var(--ink2)}
+[hidden]{display:none !important}
+@media (min-width:720px){h1{font-size:34px}h2{font-size:21px}p,ul{font-size:16px}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">💬</div>
-            <h1>NearTalk</h1>
-            <p class="subtitle">개인정보처리방침 | Privacy Policy</p>
-        </header>
 
-        <div class="lang-switch">
-            <a href="#" onclick="showLang('ko'); return false;" class="active" id="btn-ko">한국어</a>
-            <a href="#" onclick="showLang('en'); return false;" id="btn-en">English</a>
-        </div>
+<div class="wrap">
+<header>
+  <div class="brand">
+    <svg width="44" height="44" viewBox="0 0 1024 1024" role="img" aria-label="탕비실">
+      <rect width="1024" height="1024" fill="#08090A"></rect>
+      <g transform="translate(-5,-23) translate(512,512) scale(1.75) translate(-512,-512)" fill="none" stroke="#5EEAD4" stroke-width="8">
+        <path d="M320 430 L320 700 Q320 710 330 710 L630 710 Q640 710 640 700 L640 430"></path>
+        <path d="M320 430 L640 430"></path>
+        <path d="M640 500 A70 70 0 0 1 640 640"></path>
+        <path d="M466 340 L466 400" opacity=".45"></path>
+        <path d="M494 360 L494 400" opacity=".8"></path>
+      </g>
+    </svg>
+    <b>탕비실</b>
+  </div>
+  <h1 id="title">개인정보처리방침</h1>
+  <p class="updated" id="updated">최종 업데이트: 2026년 8월 28일 · 버전 3.0.0 기준</p>
+  <div class="tabs">
+    <button id="tab-ko" class="on" onclick="setLang('ko')">한국어</button>
+    <button id="tab-en" onclick="setLang('en')">English</button>
+  </div>
+</header>
 
-        <!-- Korean Version -->
-        <div class="section-ko active">
-            <div class="card">
-                <h2>1. 개요</h2>
-                <p><strong>최종 업데이트: 2026년 1월</strong></p>
-                <p>NearTalk(이하 "앱")은 사용자의 개인정보를 매우 중요하게 생각합니다. 본 개인정보처리방침은 앱이 사용자 정보를 어떻게 수집, 사용, 보호하는지 설명합니다.</p>
+<main>
 
-                <div class="highlight">
-                    <strong>핵심 원칙:</strong> NearTalk은 어떠한 개인정보도 수집하지 않으며, 모든 데이터는 사용자의 기기에만 저장됩니다.
-                </div>
-            </div>
+<!-- ───────────────────────── 한국어 ───────────────────────── -->
+<section id="ko">
 
-            <div class="card">
-                <h2>2. 수집하는 정보</h2>
-                <p>NearTalk은 <strong>어떠한 개인정보도 수집하지 않습니다.</strong></p>
+  <div class="lead">
+    <p><strong>탕비실은 대화를 서버에 보내지 않습니다.</strong> 메시지는 블루투스로 기기끼리 직접 오가고,
+    계정도 없습니다. 다만 <strong>신고 기능은 예외</strong>입니다 — 아래 4항에서 정확히 설명합니다.
+    과장하지 않는 것이 이 앱의 원칙이라, 되는 것과 안 되는 것을 같은 무게로 적습니다.</p>
+  </div>
 
-                <table>
-                    <tr>
-                        <th>항목</th>
-                        <th>수집 여부</th>
-                    </tr>
-                    <tr>
-                        <td>이름, 이메일, 전화번호</td>
-                        <td>❌ 수집하지 않음</td>
-                    </tr>
-                    <tr>
-                        <td>계정 정보</td>
-                        <td>❌ 계정 생성 불필요</td>
-                    </tr>
-                    <tr>
-                        <td>위치 정보</td>
-                        <td>❌ 수집하지 않음</td>
-                    </tr>
-                    <tr>
-                        <td>사용 분석 데이터</td>
-                        <td>⚠️ 익명화된 데이터만 수집 (아래 상세 설명)</td>
-                    </tr>
-                    <tr>
-                        <td>광고 ID</td>
-                        <td>❌ 수집하지 않음</td>
-                    </tr>
-                </table>
+  <h2>1. 수집하지 않는 정보</h2>
+  <table>
+    <tr><th>항목</th><th>수집 여부</th></tr>
+    <tr><td>이름 · 이메일 · 전화번호</td><td class="no">수집하지 않음</td></tr>
+    <tr><td>계정 정보</td><td class="no">계정 자체가 없음</td></tr>
+    <tr><td>위치 정보</td><td class="no">위치 권한을 요구하지 않음</td></tr>
+    <tr><td>주소록 · 사진 · 마이크</td><td class="no">접근하지 않음</td></tr>
+    <tr><td>광고 식별자(IDFA)</td><td class="no">사용하지 않음. 광고를 넣지 않음</td></tr>
+    <tr><td>일반 대화 내용</td><td class="no">서버로 전송되지 않음</td></tr>
+  </table>
 
-                <h3>익명화된 사용 분석</h3>
-                <p>앱 개선을 위해 Firebase Analytics를 사용하여 다음과 같은 <strong>익명화된 데이터</strong>를 수집합니다:</p>
-                <ul>
-                    <li>앱 실행/종료 이벤트</li>
-                    <li>화면 조회 (채팅, 설정 등)</li>
-                    <li>BLE 연결 상태 (연결 성공/실패 횟수)</li>
-                    <li>메시지 전송 횟수 (내용은 수집하지 않음)</li>
-                    <li>앱 버전 및 iOS 버전</li>
-                </ul>
-                <div class="highlight info">
-                    <strong>중요:</strong> 메시지 내용, 닉네임, 개인 식별 정보는 절대 수집하지 않습니다. 분석 데이터는 앱 개선 목적으로만 사용됩니다.
-                </div>
-            </div>
+  <h2>2. 기기에만 저장되는 정보</h2>
+  <p>다음은 사용자의 iPhone 안에만 저장되며 서버로 올라가지 않습니다.</p>
+  <ul>
+    <li><strong>닉네임</strong> — 대화에 표시되는 이름. 실명일 필요가 없고, 앱 설정에서 언제든 바꿀 수 있습니다.</li>
+    <li><strong>메시지</strong> — 기기 내부 파일에 저장되며 <strong>24시간이 지나면 자동으로 삭제</strong>됩니다.
+        보관 기간은 늘릴 수 없고, 구독을 해도 늘어나지 않습니다.</li>
+    <li><strong>보온병에 저장한 대화</strong> — 사용자가 직접 저장을 누른 대화만 남습니다.
+        여기에는 자동 삭제가 적용되지 않으므로 <strong>지우기 전까지 계속 보관</strong>됩니다.
+        열람 시 Face ID 또는 기기 암호로 잠금 해제를 요구합니다.</li>
+    <li><strong>방 암호에서 파생된 키</strong> — iOS Keychain에 저장됩니다.
+        3일 동안 그 방에 활동이 없으면 자동으로 삭제됩니다.</li>
+    <li><strong>앱 설정</strong> — 알림 여부 등.</li>
+  </ul>
+  <div class="note"><i></i><p>기기에 저장된 모든 데이터는 앱을 삭제하면 함께 사라집니다.
+    앱 안에서도 대화 삭제 · 보온병 비우기 · 긴급 삭제로 언제든 지울 수 있습니다.</p></div>
 
-            <div class="card">
-                <h2>3. 기기에 저장되는 데이터</h2>
-                <p>다음 데이터는 <strong>오직 사용자의 기기에만</strong> 저장됩니다:</p>
-                <ul>
-                    <li><strong>닉네임:</strong> 채팅에서 표시되는 이름 (기기 내 저장)</li>
-                    <li><strong>메시지:</strong> 주고받은 채팅 메시지 (기본 24시간 후 자동 삭제)</li>
-                    <li><strong>암호화 키:</strong> 메시지 암호화를 위한 키 (Keychain에 안전하게 저장)</li>
-                    <li><strong>앱 설정:</strong> 알림, 테마 등 사용자 설정</li>
-                </ul>
+  <h2>3. 블루투스 사용</h2>
+  <p>탕비실은 주변 기기를 찾고 메시지를 주고받기 위해 Bluetooth Low Energy(BLE)를 사용합니다.
+  블루투스는 <strong>근거리 통신 목적으로만</strong> 쓰이며, 이를 통해 위치를 추적하지 않습니다.</p>
+  <p>블루투스가 알려주는 것은 <strong>"가깝다"는 사실뿐</strong>입니다.
+  상대가 몇 층에 있는지, 어느 회사 소속인지는 앱이 알 수 없고 알려주지도 않습니다.</p>
 
-                <div class="highlight info">
-                    <strong>참고:</strong> 위 데이터는 서버로 전송되지 않으며, 사용자가 언제든지 삭제할 수 있습니다.
-                </div>
-            </div>
+  <h2>4. 신고할 때 전송되는 정보 <span style="color:var(--alert)">— 유일한 예외</span></h2>
+  <div class="note warn"><i></i><p>사용자가 <strong>신고 버튼을 누른 경우에 한해</strong>,
+    신고 대상 메시지의 <strong>내용</strong>과 신고 사유가 검토를 위해 운영 서버로 전송됩니다.
+    이것이 대화 내용이 기기 밖으로 나가는 유일한 경우입니다.</p></div>
+  <ul>
+    <li>신고하지 않으면 어떤 메시지도 서버로 가지 않습니다.</li>
+    <li>전송되는 정보에는 실명 · 이메일 · 위치가 포함되지 않습니다.</li>
+    <li>목적은 <strong>악용 검토와 차단 처리</strong>뿐이며, 다른 용도로 쓰지 않습니다.</li>
+    <li>차단된 사용자 목록을 내려받기 위해 앱이 서버에 접속할 수 있습니다. 이때 대화 내용은 전송되지 않습니다.</li>
+  </ul>
 
-            <div class="card">
-                <h2>4. 블루투스 사용</h2>
-                <p>NearTalk은 주변 사용자와 메시지를 주고받기 위해 Bluetooth Low Energy(BLE)를 사용합니다.</p>
-                <ul>
-                    <li>블루투스는 <strong>오직 근거리 통신 목적</strong>으로만 사용됩니다</li>
-                    <li>블루투스를 통해 위치를 추적하거나 개인정보를 수집하지 않습니다</li>
-                    <li>모든 블루투스 통신은 <strong>종단간 암호화(E2EE)</strong>로 보호됩니다</li>
-                </ul>
-            </div>
+  <h2>5. 사용 분석</h2>
+  <p>앱 개선을 위해 Firebase Analytics로 <strong>익명화된 사용 기록</strong>을 수집합니다.</p>
+  <ul>
+    <li>수집: 앱 실행 · 화면 전환 · 기능 사용 횟수 · 앱/iOS 버전</li>
+    <li>수집하지 않음: <strong>메시지 내용 · 닉네임 · 광고 식별자 · 위치</strong></li>
+  </ul>
+  <p>분석 수집은 <strong>앱 설정에서 끌 수 있습니다.</strong></p>
 
-            <div class="card">
-                <h2>5. 데이터 보안</h2>
-                <h3>종단간 암호화 (E2EE)</h3>
-                <p>모든 메시지는 Noise Protocol을 기반으로 한 종단간 암호화로 보호됩니다. 이는 중간에서 메시지를 가로채더라도 내용을 확인할 수 없음을 의미합니다.</p>
+  <h2>6. 결제 정보</h2>
+  <p>보온병 구독은 Apple의 App Store 인앱결제로 처리됩니다.
+  결제 수단 · 카드 번호 · 청구 정보는 <strong>Apple이 처리하며 앱은 접근할 수 없습니다.</strong>
+  앱은 구독이 활성 상태인지 여부만 확인합니다.</p>
 
-                <h3>로컬 저장소 보안</h3>
-                <ul>
-                    <li>암호화 키는 iOS Keychain에 안전하게 저장됩니다</li>
-                    <li>메시지는 기기의 보안 저장소에 저장됩니다</li>
-                </ul>
-            </div>
+  <h2>7. 캡처 감지</h2>
+  <p>대화 중 화면 녹화나 캡처가 감지되면 같은 방의 참여자 모두에게 알립니다.
+  이때 전송되는 것은 <strong>"캡처가 있었다"는 사실뿐</strong>이며, 누가 했는지는 표시하지 않습니다.</p>
+  <div class="note warn"><i></i><p>캡처 감지는 <strong>억제 수단이지 차단 수단이 아닙니다.</strong>
+    iOS는 스크린샷을 막을 수 없고, 다른 기기로 화면을 촬영하는 것은 어떤 앱도 막을 수 없습니다.</p></div>
 
-            <div class="card">
-                <h2>6. Panic Mode (긴급 삭제)</h2>
-                <p>긴급 상황 시 모든 데이터를 즉시 삭제할 수 있습니다:</p>
-                <ul>
-                    <li>앱 로고를 3회 빠르게 탭하면 실행됩니다</li>
-                    <li>모든 메시지, 암호화 키, 설정이 즉시 삭제됩니다</li>
-                    <li>삭제된 데이터는 복구할 수 없습니다</li>
-                </ul>
+  <h2>8. 익명성의 한계</h2>
+  <p>익명은 <strong>사람 수에 달려 있습니다.</strong> 방에 둘뿐이라면 상대가 쓴 것이 아닌 모든 말은
+  당신이 쓴 것이므로, 익명은 수학적으로 성립하지 않습니다.
+  앱은 이 상태를 숨기지 않고 대화 화면 상단에 항상 표시합니다.</p>
 
-                <div class="highlight warning">
-                    <strong>주의:</strong> Panic Mode로 삭제된 데이터는 절대 복구할 수 없습니다.
-                </div>
-            </div>
+  <h2>9. 긴급 삭제</h2>
+  <p>앱 로고를 빠르게 세 번 누르면 메시지 · 저장된 대화 · 방 암호 · 설정이 즉시 삭제됩니다.
+  <strong>삭제된 데이터는 복구할 수 없습니다.</strong></p>
 
-            <div class="card">
-                <h2>7. 제3자 공유</h2>
-                <p>NearTalk은 <strong>개인 식별 가능한 데이터를 제3자와 공유하지 않습니다.</strong></p>
-                <ul>
-                    <li>광고 네트워크 없음</li>
-                    <li>Firebase Analytics: 익명화된 사용 통계만 수집 (Google 개인정보처리방침 적용)</li>
-                    <li>메시지 내용은 외부로 전송되지 않음</li>
-                </ul>
-            </div>
+  <h2>10. 제3자 제공</h2>
+  <p>수집한 정보를 판매하거나 광고 목적으로 제공하지 않습니다.
+  앱이 사용하는 외부 서비스는 다음뿐입니다.</p>
+  <ul>
+    <li><strong>Google Firebase</strong> — 익명 사용 분석 (5항)</li>
+    <li><strong>Apple</strong> — 인앱결제 처리 (6항)</li>
+    <li><strong>자체 운영 서버</strong> — 신고 검토와 차단 목록 (4항)</li>
+  </ul>
 
-            <div class="card">
-                <h2>8. 아동 개인정보</h2>
-                <p>NearTalk은 13세 미만 아동의 개인정보를 수집하지 않습니다. 앱 자체가 어떠한 개인정보도 수집하지 않으므로, 모든 연령대에서 안전하게 사용할 수 있습니다.</p>
-            </div>
+  <h2>11. 아동의 개인정보</h2>
+  <p>본 앱은 만 17세 미만을 대상으로 하지 않으며, 아동으로부터 의도적으로 정보를 수집하지 않습니다.</p>
 
-            <div class="card">
-                <h2>9. 사용자의 권리</h2>
-                <p>사용자는 언제든지 다음 권리를 행사할 수 있습니다:</p>
-                <ul>
-                    <li><strong>데이터 삭제:</strong> 설정 > 데이터 삭제 또는 Panic Mode 사용</li>
-                    <li><strong>앱 삭제:</strong> 앱 삭제 시 모든 로컬 데이터가 함께 삭제됩니다</li>
-                </ul>
-            </div>
+  <h2>12. 이용자의 권리</h2>
+  <p>앱은 계정을 만들지 않으므로 서버에 이용자를 특정할 수 있는 저장소가 없습니다.
+  기기에 저장된 데이터는 <strong>앱 안에서 직접 삭제</strong>하거나 앱을 삭제하면 사라집니다.
+  신고로 전송된 내용의 삭제를 원하시면 아래 주소로 문의해 주세요.</p>
 
-            <div class="card">
-                <h2>10. 정책 변경</h2>
-                <p>본 개인정보처리방침은 변경될 수 있습니다. 중요한 변경 사항이 있을 경우 앱 내 공지를 통해 알려드립니다.</p>
-            </div>
+  <h2>13. 정책 변경</h2>
+  <p>정책이 바뀌면 이 페이지의 최종 업데이트 날짜를 갱신하고, 중요한 변경은 앱 안에서 알립니다.</p>
 
-            <div class="card">
-                <h2>11. 문의</h2>
-                <p>개인정보처리방침에 관한 문의사항이 있으시면 아래로 연락해 주세요:</p>
-                <p><strong>이메일:</strong> privacy@neartalk.app</p>
-            </div>
-        </div>
+  <h2>14. 문의</h2>
+  <p>개인정보 관련 문의: <a href="mailto:dl.studio2025@gmail.com">dl.studio2025@gmail.com</a></p>
 
-        <!-- English Version -->
-        <div class="section-en">
-            <div class="card">
-                <h2>1. Overview</h2>
-                <p><strong>Last Updated: January 2026</strong></p>
-                <p>NearTalk (the "App") takes your privacy seriously. This Privacy Policy explains how the App collects, uses, and protects your information.</p>
+</section>
 
-                <div class="highlight">
-                    <strong>Key Principle:</strong> NearTalk does not collect any personal information. All data is stored only on your device.
-                </div>
-            </div>
+<!-- ───────────────────────── English ───────────────────────── -->
+<section id="en" hidden>
 
-            <div class="card">
-                <h2>2. Information We Collect</h2>
-                <p>NearTalk <strong>does not collect any personal information.</strong></p>
+  <div class="lead">
+    <p><strong>Pantry does not send your conversations to a server.</strong> Messages travel directly
+    between phones over Bluetooth, and there are no accounts. There is <strong>one exception —
+    reporting</strong>, described precisely in section 4. Not overstating things is a principle of this
+    app, so what it cannot do is written with the same weight as what it can.</p>
+  </div>
 
-                <table>
-                    <tr>
-                        <th>Data Type</th>
-                        <th>Collection Status</th>
-                    </tr>
-                    <tr>
-                        <td>Name, Email, Phone Number</td>
-                        <td>❌ Not Collected</td>
-                    </tr>
-                    <tr>
-                        <td>Account Information</td>
-                        <td>❌ No Account Required</td>
-                    </tr>
-                    <tr>
-                        <td>Location Data</td>
-                        <td>❌ Not Collected</td>
-                    </tr>
-                    <tr>
-                        <td>Analytics Data</td>
-                        <td>⚠️ Only anonymized data (see details below)</td>
-                    </tr>
-                    <tr>
-                        <td>Advertising ID</td>
-                        <td>❌ Not Collected</td>
-                    </tr>
-                </table>
+  <h2>1. What we do not collect</h2>
+  <table>
+    <tr><th>Item</th><th>Collected?</th></tr>
+    <tr><td>Name, email, phone number</td><td class="no">No</td></tr>
+    <tr><td>Account information</td><td class="no">There are no accounts</td></tr>
+    <tr><td>Location</td><td class="no">No location permission is requested</td></tr>
+    <tr><td>Contacts, photos, microphone</td><td class="no">Never accessed</td></tr>
+    <tr><td>Advertising identifier (IDFA)</td><td class="no">Not used. There are no ads</td></tr>
+    <tr><td>Ordinary message content</td><td class="no">Never sent to a server</td></tr>
+  </table>
 
-                <h3>Anonymized Usage Analytics</h3>
-                <p>To improve the app, we use Firebase Analytics to collect the following <strong>anonymized data</strong>:</p>
-                <ul>
-                    <li>App launch/close events</li>
-                    <li>Screen views (chat, settings, etc.)</li>
-                    <li>BLE connection status (success/failure counts)</li>
-                    <li>Message send counts (content is NOT collected)</li>
-                    <li>App version and iOS version</li>
-                </ul>
-                <div class="highlight info">
-                    <strong>Important:</strong> Message content, nicknames, and personally identifiable information are NEVER collected. Analytics data is used solely for app improvement.
-                </div>
-            </div>
+  <h2>2. Stored on your device only</h2>
+  <ul>
+    <li><strong>Nickname</strong> — shown in chat. It need not be your real name and can be changed anytime in Settings.</li>
+    <li><strong>Messages</strong> — stored in a file on the device and <strong>deleted automatically after 24 hours</strong>.
+        This period cannot be extended, and a subscription does not extend it.</li>
+    <li><strong>Conversations saved to the Thermos</strong> — only what you explicitly save.
+        Automatic deletion does not apply, so they are <strong>kept until you delete them</strong>.
+        Opening them requires Face ID or your device passcode.</li>
+    <li><strong>Keys derived from a room passphrase</strong> — stored in the iOS Keychain and
+        erased automatically after 3 days without activity in that room.</li>
+    <li><strong>App settings</strong> — such as notification preferences.</li>
+  </ul>
 
-            <div class="card">
-                <h2>3. Data Stored on Your Device</h2>
-                <p>The following data is stored <strong>only on your device</strong>:</p>
-                <ul>
-                    <li><strong>Nickname:</strong> Display name in chat (stored locally)</li>
-                    <li><strong>Messages:</strong> Chat messages (auto-deleted after 24 hours by default)</li>
-                    <li><strong>Encryption Keys:</strong> Keys for message encryption (securely stored in Keychain)</li>
-                    <li><strong>App Settings:</strong> Notifications, themes, and other preferences</li>
-                </ul>
+  <h2>3. Bluetooth</h2>
+  <p>Pantry uses Bluetooth Low Energy to discover nearby devices and exchange messages.
+  Bluetooth is used <strong>solely for short-range communication</strong> and never to track location.</p>
+  <p>Bluetooth only establishes that someone is <strong>nearby</strong>. The app cannot tell which floor
+  or which company a person belongs to, and never claims to.</p>
 
-                <div class="highlight info">
-                    <strong>Note:</strong> This data is never transmitted to any server and can be deleted at any time.
-                </div>
-            </div>
+  <h2>4. What is sent when you report <span style="color:var(--alert)">— the one exception</span></h2>
+  <div class="note warn"><i></i><p><strong>Only when you tap Report</strong>, the <strong>content</strong>
+    of the reported message and the reason are transmitted to our moderation server for review.
+    This is the only case in which message content leaves your device.</p></div>
+  <ul>
+    <li>If you do not report, no message is ever sent to a server.</li>
+    <li>No real name, email address, or location is included.</li>
+    <li>It is used <strong>only for abuse review and blocking</strong>, for no other purpose.</li>
+    <li>The app may contact the server to download a blocklist. No message content is sent in that request.</li>
+  </ul>
 
-            <div class="card">
-                <h2>4. Bluetooth Usage</h2>
-                <p>NearTalk uses Bluetooth Low Energy (BLE) to communicate with nearby users.</p>
-                <ul>
-                    <li>Bluetooth is used <strong>only for proximity communication</strong></li>
-                    <li>We do not track location or collect personal information via Bluetooth</li>
-                    <li>All Bluetooth communication is protected by <strong>end-to-end encryption (E2EE)</strong></li>
-                </ul>
-            </div>
+  <h2>5. Analytics</h2>
+  <p>We use Firebase Analytics to collect <strong>anonymised usage data</strong> to improve the app.</p>
+  <ul>
+    <li>Collected: launches, screen views, feature usage counts, app and iOS version</li>
+    <li>Not collected: <strong>message content, nickname, advertising identifier, location</strong></li>
+  </ul>
+  <p>Analytics collection <strong>can be turned off in the app's settings.</strong></p>
 
-            <div class="card">
-                <h2>5. Data Security</h2>
-                <h3>End-to-End Encryption (E2EE)</h3>
-                <p>All messages are protected by end-to-end encryption based on the Noise Protocol. This means that even if messages are intercepted, they cannot be read.</p>
+  <h2>6. Payments</h2>
+  <p>The Thermos subscription is processed through Apple's In-App Purchase.
+  Payment methods, card numbers, and billing details are <strong>handled by Apple and are not
+  accessible to the app.</strong> The app only checks whether a subscription is active.</p>
 
-                <h3>Local Storage Security</h3>
-                <ul>
-                    <li>Encryption keys are securely stored in iOS Keychain</li>
-                    <li>Messages are stored in the device's secure storage</li>
-                </ul>
-            </div>
+  <h2>7. Capture detection</h2>
+  <p>If screen recording or a screenshot is detected during a conversation, everyone in the room is
+  notified. Only the <strong>fact that a capture occurred</strong> is shared; who did it is not shown.</p>
+  <div class="note warn"><i></i><p>Capture detection is a <strong>deterrent, not a block.</strong>
+    iOS cannot prevent screenshots, and no app can prevent someone photographing the screen with
+    another device.</p></div>
 
-            <div class="card">
-                <h2>6. Panic Mode (Emergency Deletion)</h2>
-                <p>In emergency situations, you can instantly delete all data:</p>
-                <ul>
-                    <li>Triple-tap the app logo to activate</li>
-                    <li>All messages, encryption keys, and settings are immediately deleted</li>
-                    <li>Deleted data cannot be recovered</li>
-                </ul>
+  <h2>8. The limits of anonymity</h2>
+  <p>Anonymity depends on <strong>how many people are present.</strong> If only two of you are in a room,
+  everything the other person did not write was written by you, so anonymity cannot hold.
+  The app does not hide this: it is shown at the top of the chat screen at all times.</p>
 
-                <div class="highlight warning">
-                    <strong>Warning:</strong> Data deleted via Panic Mode cannot be recovered.
-                </div>
-            </div>
+  <h2>9. Emergency deletion</h2>
+  <p>Tapping the app logo three times quickly erases messages, saved conversations, room keys, and
+  settings immediately. <strong>Deleted data cannot be recovered.</strong></p>
 
-            <div class="card">
-                <h2>7. Third-Party Sharing</h2>
-                <p>NearTalk <strong>does not share personally identifiable data with third parties.</strong></p>
-                <ul>
-                    <li>No advertising networks</li>
-                    <li>Firebase Analytics: Only anonymized usage statistics (subject to Google's Privacy Policy)</li>
-                    <li>Message content is never transmitted externally</li>
-                </ul>
-            </div>
+  <h2>10. Third parties</h2>
+  <p>We do not sell collected information or provide it for advertising. The only external services
+  the app uses are:</p>
+  <ul>
+    <li><strong>Google Firebase</strong> — anonymised analytics (section 5)</li>
+    <li><strong>Apple</strong> — in-app purchase processing (section 6)</li>
+    <li><strong>Our own server</strong> — report review and blocklist (section 4)</li>
+  </ul>
 
-            <div class="card">
-                <h2>8. Children's Privacy</h2>
-                <p>NearTalk does not collect personal information from children under 13. Since the app does not collect any personal information, it is safe for users of all ages.</p>
-            </div>
+  <h2>11. Children's privacy</h2>
+  <p>This app is not directed at children under 17, and we do not knowingly collect information from them.</p>
 
-            <div class="card">
-                <h2>9. Your Rights</h2>
-                <p>You can exercise the following rights at any time:</p>
-                <ul>
-                    <li><strong>Data Deletion:</strong> Settings > Delete Data or use Panic Mode</li>
-                    <li><strong>App Deletion:</strong> Deleting the app removes all local data</li>
-                </ul>
-            </div>
+  <h2>12. Your rights</h2>
+  <p>Because the app creates no account, there is no server-side store that can identify you.
+  Data on your device can be <strong>deleted from within the app</strong> or by deleting the app.
+  To request deletion of content submitted through a report, contact us below.</p>
 
-            <div class="card">
-                <h2>10. Policy Changes</h2>
-                <p>This Privacy Policy may be updated. We will notify you of significant changes through in-app notifications.</p>
-            </div>
+  <h2>13. Changes to this policy</h2>
+  <p>If this policy changes we will update the date at the top of this page, and significant changes
+  will be announced in the app.</p>
 
-            <div class="card">
-                <h2>11. Contact</h2>
-                <p>If you have questions about this Privacy Policy, please contact us:</p>
-                <p><strong>Email:</strong> privacy@neartalk.app</p>
-            </div>
-        </div>
+  <h2>14. Contact</h2>
+  <p>Privacy enquiries: <a href="mailto:dl.studio2025@gmail.com">dl.studio2025@gmail.com</a></p>
 
-        <footer>
-            <p>&copy; 2026 NearTalk. All rights reserved.</p>
-            <p>Version 1.0.0</p>
-        </footer>
-    </div>
+</section>
 
-    <script>
-        function showLang(lang) {
-            document.querySelectorAll('.section-ko, .section-en').forEach(el => {
-                el.classList.remove('active');
-            });
-            document.querySelectorAll('.lang-switch a').forEach(el => {
-                el.classList.remove('active');
-            });
+</main>
 
-            document.querySelector('.section-' + lang).classList.add('active');
-            document.getElementById('btn-' + lang).classList.add('active');
-        }
-    </script>
+<footer>
+  <div class="flinks">
+    <a href="index.html">홈</a>
+    <a href="community-guidelines.html">커뮤니티 가이드라인</a>
+    <a href="support.html">고객 지원</a>
+  </div>
+  <div>탕비실 · iPhone · iOS 16.0 이상</div>
+</footer>
+</div>
+
+<script>
+function setLang(l) {
+  document.getElementById('ko').hidden = (l !== 'ko');
+  document.getElementById('en').hidden = (l !== 'en');
+  document.getElementById('tab-ko').classList.toggle('on', l === 'ko');
+  document.getElementById('tab-en').classList.toggle('on', l === 'en');
+  document.documentElement.lang = (l === 'ko') ? 'ko' : 'en';
+  document.getElementById('title').textContent = (l === 'ko') ? '개인정보처리방침' : 'Privacy Policy';
+  document.getElementById('updated').textContent = (l === 'ko')
+    ? '최종 업데이트: 2026년 8월 28일 · 버전 3.0.0 기준'
+    : 'Last updated: 28 August 2026 · for version 3.0.0';
+}
+if ((navigator.language || '').slice(0, 2) !== 'ko') setLang('en');
+</script>
 </body>
 </html>
